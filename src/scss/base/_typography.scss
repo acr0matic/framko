@@ -5,8 +5,13 @@
 body {
   color: $color-text__primary;
 
-  font-size: $font-size__text--regular;
-  font-family: Roboto, sans-serif;
+  font-size: $font-size__text--b;
+  font-family: WorkSans, sans-serif;
 
   line-height: $line-height--primary;
+}
+
+h1,
+h2 {
+  font-family: "Times New Roman", serif;
 }
