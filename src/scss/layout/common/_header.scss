@@ -3,9 +3,59 @@
 // -----------------------------------------------------------------------------
 
 #header {
-
 }
 
 .header {
+  &__wrapper {
+    position: relative;
 
+    display: flex;
+    align-items: flex-start;
+
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+
+  &__social {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      z-index: 2;
+
+      top: 50%;
+      left: 50%;
+
+      width: 48px;
+      height: 48px;
+
+      transform: translate(-50%, -50%);
+      transition: $transition ease;
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+
+    .circle {
+      width: 160px;
+      height: 160px;
+
+      animation: rotate infinite 10s linear;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

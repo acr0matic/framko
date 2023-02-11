@@ -41,7 +41,7 @@
   <meta name="robots" content="index,follow" />
 
   <!-- Покраска адресной строки в мобильных Chrome, Firefox OS и Opera -->
-  <meta name="theme-color" content="#4285f4" />
+  <meta name="theme-color" content="#eeeeee" />
 
   <!-- Покраска для iOS Safari -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -62,29 +62,160 @@
 
 <body>
   <!-- Шапка -->
-  <header id="header">
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__social">
+          <a href="">
+            <img class="icon" src="img/layout/partials/header/instagram.svg" alt="">
+          </a>
 
+          <img class="circle" src="img/layout/partials/header/circle.svg" alt="">
+        </div>
+        <!-- /.header__social -->
+
+        <div class="header__logo">
+          <a href="#">
+            <img src="img/logo.png" alt="" class="logo logo--header">
+          </a>
+        </div>
+        <!-- /.header__logo -->
+
+        <div class="header__burger">
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <!-- /.header__burger -->
+      </div>
+      <!-- /.header__wrapper -->
+    </div>
+    <!-- /.container -->
   </header>
 
-  <!-- Основной контент -->
-  <main>
-    <section>
-    </section>
-  </main>
+<!-- Основной контент -->
+<main id="home">
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero">
+        <div class="row align-items-start">
+          <div class="col-7">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Узнай, как начать
+                <br>
+                карьеру врача за рубежом
+              </h1>
 
-  <!-- Подвал -->
-  <footer id="footer">
+              <p class="hero__description">
+                Мастер-класс по подготовке к нострификации диплома
+                <br>
+                и работе в Европе
+              </p>
 
-  </footer>
+              <div class="hero__action">
+                <button class="button button-primary me-5">Записаться на мастер-класс</button>
+                <button class="button button-outline">Подробнее о мастер-классе</button>
+              </div>
+              <!-- /.hero__action -->
+            </div>
+            <!-- /.hero__content -->
 
-  <!-- Скрипты -->
-  <!-- build:js js/script.min.js -->
-  <script src="scripts/libraries/lazyload.js"></script>
-  <script src="scripts/libraries/forms.js"></script>
+            <div class="hero__info">
+              <div class="hero__advantage">
+                <img class="icon" src="img/layout/page/index/hero/sun.svg" alt="">
+                Более 100
+                <br>
+                клиентов
+              </div>
+              <!-- /.hero__advantage -->
 
-  <script src="scripts/base.js"></script>
-  <script src="scripts/init.js"></script>
-  <!-- endbuild -->
+              <div class="hero__advantage">
+                <img class="icon" src="img/layout/page/index/hero/star.svg" alt="">
+                114 приглашений
+                <br>
+                из университетов
+                <br>
+                получили ученики
+              </div>
+              <!-- /.hero__advantage -->
+
+              <div class="hero__advantage">
+                <img class="icon" src="img/layout/page/index/hero/eye.svg" alt="">
+                Более 15
+                <br>
+                переехавших врачей
+              </div>
+              <!-- /.hero__advantage -->
+            </div>
+            <!-- /.hero__info -->
+          </div>
+          <!-- /.col-7 -->
+
+          <div class="col-5">
+            <picture class="hero__picture lazy">
+              <img class="lazy__item lazy__item--blur image image--contain" src="" data-src="img/layout/page/index/hero/picture.jpg" alt="">
+            </picture>
+          </div>
+          <!-- /.col-5 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.hero -->
+    </div>
+    <!-- /.container -->
+  </section>
+</main>
+
+<!-- Подвал -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__content">
+        <h2 class="footer__title">Остались вопросы?</h2>
+        <div class="footer__text">Свяжись с нами</div>
+      </div>
+      <!-- /.footer__content -->
+
+      <div class="footer__contact contact-list">
+        <div class="contact-list__item">
+          <a href="">
+            <img src="img/icons/contact/phone.svg" alt="">
+          </a>
+        </div>
+        <!-- /.contact-list__item -->
+
+        <div class="contact-list__item">
+          <a href="">
+            <img src="img/icons/contact/mail.svg" alt="">
+          </a>
+        </div>
+        <!-- /.contact-list__item -->
+
+        <div class="contact-list__item">
+          <a href="">
+            <img src="img/icons/contact/instagram.svg" alt="">
+          </a>
+        </div>
+        <!-- /.contact-list__item -->
+      </div>
+      <!-- /.footer__contact contact-list -->
+    </div>
+    <!-- /.footer -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Скрипты -->
+<!-- build:js js/script.min.js -->
+<script src="scripts/libraries/lazyload.js"></script>
+<script src="scripts/libraries/forms.js"></script>
+
+<script src="scripts/base.js"></script>
+<script src="scripts/init.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>

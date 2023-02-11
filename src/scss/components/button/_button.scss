@@ -1,13 +1,17 @@
 .button {
+  padding: 18px 32px;
+
   border: none;
   border-radius: $border-radius--button;
   outline: none;
 
   background-color: transparent;
 
+  font-weight: $weight-Medium;
+  font-size: $font-size__text--regular;
   white-space: nowrap;
-  cursor: pointer;
 
+  cursor: pointer;
   transition: all $transition ease;
 
   &:disabled {

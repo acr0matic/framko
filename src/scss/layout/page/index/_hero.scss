@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// Фрагмент стилизации какой-то секции
+// -----------------------------------------------------------------------------
+
+#hero {
+}
+
+.hero {
+  &__content {
+    margin-bottom: 84px;
+    padding-top: 36px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: $weight-Bold;
+    font-size: $font-size__title--large;
+
+    line-height: 1;
+  }
+
+  &__description {
+    margin-bottom: 54px;
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: flex-start;
+
+    padding: 24px 30px;
+
+    border: 1px solid #111111;
+    border-radius: 24px;
+  }
+
+  &__advantage {
+    color: $color-text__black;
+    font-weight: $weight-Medium;
+    font-size: $font-size__text--regular;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &:nth-child(1) {
+      width: 120px;
+    }
+
+    &:nth-child(2) {
+      width: 186px;
+    }
+
+    &:nth-child(3) {
+      width: 170px;
+    }
+
+    .icon {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__picture {
+    left: -15px;
+    width: 110%;
+  }
+}

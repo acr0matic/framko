@@ -1,9 +1,12 @@
 .section {
-  &__header {
+  margin-bottom: 200px;
 
+  &__header {
+    margin-bottom: 72px;
   }
 
   &__title {
-
+    margin-bottom: 32px;
+    font-size: $font-size__title--medium;
   }
 }

@@ -5,7 +5,7 @@
 body {
   color: $color-text__primary;
 
-  font-size: $font-size__text--b;
+  font-size: $font-size__text--big;
   font-family: WorkSans, sans-serif;
 
   line-height: $line-height--primary;
@@ -13,5 +13,6 @@ body {
 
 h1,
 h2 {
+  color: $palette-black;
   font-family: "Times New Roman", serif;
 }
