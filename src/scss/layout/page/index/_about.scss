@@ -1,0 +1,48 @@
+#about {
+}
+
+.about {
+  &__content {
+    position: relative;
+    padding-top: 24px;
+
+    .background {
+      position: absolute;
+      z-index: -1;
+
+      &:nth-child(1) {
+        top: -100px;
+        right: -50%;
+      }
+
+      &:nth-child(2) {
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    min-height: 200px;
+    padding: 18px 22px;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+  }
+
+  &__text {
+    font-size: $font-size__text--regular;
+    line-height: 1.4;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    margin-top: 40px;
+
+    img {
+      width: 24px;
+    }
+  }
+}

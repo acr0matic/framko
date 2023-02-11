@@ -3,10 +3,17 @@
 
   &__header {
     margin-bottom: 72px;
+
+    &--offset {
+      margin-bottom: 48px;
+    }
   }
 
   &__title {
     margin-bottom: 32px;
+    font-weight: $weight-Bold;
     font-size: $font-size__title--medium;
+
+    line-height: 1;
   }
 }

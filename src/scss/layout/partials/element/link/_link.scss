@@ -1,8 +1,12 @@
 .link {
+  color: $color-text__blue;
+
+  font-weight: $weight-Bold;
   transition: $transition ease;
 
   @media (hover: hover) {
     &:hover {
+      color: $color-text__black;
     }
   }
 }
