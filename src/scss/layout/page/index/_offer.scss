@@ -1,0 +1,18 @@
+#offer {
+}
+
+.offer {
+  &__card {
+  }
+
+  &__picture {
+    overflow: hidden;
+
+    margin-bottom: 54px;
+    border-radius: 0 48px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}
