@@ -1,0 +1,21 @@
+#speaker {
+}
+
+.speaker {
+  &__content {
+    padding-top: 54px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    line-height: 1.7;
+
+    strong {
+      color: #000000;
+      font-weight: $weight-SemiBold;
+    }
+  }
+}
