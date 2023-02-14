@@ -7,11 +7,20 @@
 
 .hero {
   &__content {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 54px;
+    }
+
     margin-bottom: 84px;
     padding-top: 36px;
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 36px;
+      font-size: $font-size__title--medium;
+    }
+
     margin-bottom: 50px;
 
     font-weight: $weight-Bold;
@@ -21,6 +30,11 @@
   }
 
   &__description {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 36px;
+      font-size: $font-size__text--regular + 2px;
+    }
+
     margin-bottom: 54px;
   }
 

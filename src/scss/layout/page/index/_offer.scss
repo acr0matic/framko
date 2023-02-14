@@ -6,6 +6,10 @@
   }
 
   &__picture {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 36px;
+    }
+
     overflow: hidden;
 
     margin-bottom: 54px;

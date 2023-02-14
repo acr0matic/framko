@@ -1,15 +1,31 @@
 .section {
+  @include breakpoint($breakpoint-laptop--medium) {
+    margin-bottom: 140px;
+  }
+
   margin-bottom: 200px;
 
   &__header {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 64px;
+    }
+
     margin-bottom: 72px;
 
     &--offset {
+      @include breakpoint($breakpoint-laptop--medium) {
+        margin-bottom: 36px;
+      }
+
       margin-bottom: 48px;
     }
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__title--medium - 8px;
+    }
+
     margin-bottom: 32px;
     font-weight: $weight-Bold;
     font-size: $font-size__title--medium;

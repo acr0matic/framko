@@ -63,6 +63,11 @@
   }
 
   &__background {
+    @include breakpoint($breakpoint-laptop--medium) {
+      top: -120px;
+      left: -145px;
+    }
+
     position: absolute;
     z-index: -1;
 
@@ -76,6 +81,11 @@
   }
 
   .icon-blinking-stars {
+    @include breakpoint($breakpoint-laptop--medium) {
+      top: 10px;
+      left: 10px;
+    }
+
     position: absolute;
     top: 40px;
     left: 40px;

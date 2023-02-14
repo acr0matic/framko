@@ -1,12 +1,7 @@
 const sliderOffer = new Swiper('#slider-offer .swiper', {
   slidesPerView: 3,
   slidesPerGroup: 3,
-  spaceBetween: 144,
-
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  spaceBetween: 64,
 
   navigation: {
     prevEl: '#slider-offer .swiper-button-prev',
@@ -18,10 +13,23 @@ const sliderOffer = new Swiper('#slider-offer .swiper', {
     clickable: true,
   },
 
+
+  breakpoints: {
+    1300: {
+      spaceBetween: 144
+    },
+  }
+
   // effect: 'fade',
   // fadeEffect: {
   //   crossFade: true
   // },
+
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+
 });
 
 const sliderPrice = new Swiper('#slider-price .swiper', {
@@ -43,7 +51,7 @@ const sliderPrice = new Swiper('#slider-price .swiper', {
   },
 
   breakpoints: {
-    1400: {
+    1300: {
       slidesPerView: 3
     },
   }

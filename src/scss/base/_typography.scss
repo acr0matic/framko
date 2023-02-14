@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 
 body {
+  @include breakpoint($breakpoint-laptop--medium) {
+    font-size: $font-size__text--big - 2px;
+  }
+
   color: $color-text__primary;
 
   font-size: $font-size__text--big;
