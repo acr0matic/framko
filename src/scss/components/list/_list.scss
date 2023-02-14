@@ -1,4 +1,10 @@
 .list {
-  &__item {
+  padding-left: 20px;
+  list-style-type: disc;
+
+  li {
+    &::marker {
+      content: initial;
+    }
   }
 }

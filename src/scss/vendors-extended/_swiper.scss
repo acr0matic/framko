@@ -1,4 +1,8 @@
 .swiper {
+  &-wrapper {
+    box-sizing: border-box;
+  }
+
   &-button {
     &-prev,
     &-next {
@@ -57,6 +61,21 @@
 
     &-bullet-active {
       background-color: $palette-black;
+    }
+  }
+
+  &-scrollbar {
+    position: static !important;
+    height: 7px !important;
+    margin-top: 40px;
+
+    background-color: #ededee;
+
+    &-drag {
+      border-radius: 0;
+      background-color: $palette-black;
+
+      cursor: e-resize;
     }
   }
 }

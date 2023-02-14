@@ -1,0 +1,21 @@
+#information {
+}
+
+.information {
+  &__content {
+    line-height: 1.7;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 54px;
+    font-weight: $weight-SemiBold;
+  }
+
+  &__action {
+    text-align: center;
+  }
+}

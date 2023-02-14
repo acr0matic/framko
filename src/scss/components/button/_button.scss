@@ -9,10 +9,15 @@
 
   font-weight: $weight-Medium;
   font-size: $font-size__text--regular;
+  text-align: center;
   white-space: nowrap;
 
   cursor: pointer;
   transition: all $transition ease;
+
+  &--block {
+    width: 100%;
+  }
 
   &:disabled {
     opacity: 0.5;

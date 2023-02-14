@@ -1,0 +1,25 @@
+#video {
+
+}
+
+.video {
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__preview {
+    margin: 0 auto;
+    border-radius: 24px;
+  }
+
+  &__play {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}

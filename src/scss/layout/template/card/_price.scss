@@ -1,0 +1,126 @@
+.card-price {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  padding: 24px 30px;
+  border: 1px solid $palette-black;
+  border-radius: 24px;
+
+  &__header {
+    margin-bottom: 40px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $palette-black;
+
+    font-weight: $weight-Medium;
+  }
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: $font-size__title--small;
+    text-align: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--new {
+      .card-price__cost {
+        &:nth-child(1) {
+          text-decoration: line-through;
+        }
+
+        &:nth-child(2) {
+          margin-left: 32px;
+
+          color: $palette-blue;
+          font-size: $font-size__title--small;
+        }
+      }
+    }
+  }
+
+  &__cost {
+    font-size: $font-size__text--large;
+
+    &::after {
+      content: " ₽";
+    }
+  }
+
+  &__list {
+    margin-bottom: 48px;
+    font-weight: $weight-Medium;
+
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &:last-child {
+        & > *::before {
+          background-image: url("../img/icons/misc/check--purple.svg");
+        }
+      }
+
+      & > span {
+        display: flex;
+        align-items: flex-start;
+
+        &::before {
+          content: "";
+          display: block;
+
+          flex-shrink: 0;
+
+          width: 40px;
+          height: 30px;
+
+          margin-right: 16px;
+
+          background-image: url("../img/icons/misc/check.svg");
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      & > ul {
+        margin-top: 18px;
+        margin-bottom: 48px;
+
+        padding-left: 30px;
+        list-style-type: disc;
+
+        & > li {
+          &::marker {
+            content: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &__action {
+    margin-top: auto;
+    padding: 0 55px;
+
+    .button {
+      max-width: 250px;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $palette-blue;
+          color: $color-text__white;
+        }
+      }
+    }
+  }
+}
