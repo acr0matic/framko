@@ -1,12 +1,54 @@
 #video {
-
 }
 
 .video {
+  .icon-blinking-stars {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
   &__content {
     position: relative;
     display: flex;
     justify-content: center;
+  }
+
+  &__background {
+    & > * {
+      position: absolute;
+    }
+
+    .cross {
+      &:nth-child(1) {
+        top: 60px;
+        left: 100px;
+
+        animation: move 3s ease infinite;
+      }
+
+      &:nth-child(2) {
+        right: 200px;
+        bottom: -40px;
+
+        animation: move 3s ease infinite reverse;
+      }
+    }
+
+    .circle,
+    .wave {
+      z-index: -1;
+    }
+
+    .circle {
+      top: 40%;
+      left: 0;
+    }
+
+    .wave {
+      top: 80%;
+      left: 200px;
+    }
   }
 
   &__preview {
