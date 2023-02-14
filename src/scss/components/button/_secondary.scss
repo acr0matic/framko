@@ -1,0 +1,10 @@
+.button-secondary {
+  background-color: $palette-blue;
+  color: $color-text__white;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $palette-black;
+    }
+  }
+}
