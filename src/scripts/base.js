@@ -9,3 +9,17 @@ const scrollParams = {
   offset: 0,
   updateURL: false,
 }
+
+const StyleСlass = {
+  'header': {
+    'sticky': 'header--sticky',
+  },
+
+  'mobile': {
+    'open': 'mobile-menu--open',
+  },
+
+  'slider': {
+    'active': 'swiper-button--active',
+  },
+}

@@ -6,18 +6,42 @@
 }
 
 .header {
+  position: fixed;
+  z-index: $z-index-header;
+  top: 0;
+
+  width: 100%;
+  background-color: $palette-white;
+
+  &--sticky {
+    .header__social {
+      opacity: 0;
+    }
+
+    .header__wrapper {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
   &__wrapper {
     position: relative;
 
     display: flex;
     align-items: flex-start;
 
-    margin-top: 64px;
-    margin-bottom: 24px;
+    padding-top: 64px;
+    padding-bottom: 56px;
+
+    transition: $transition ease;
   }
 
   &__social {
-    position: relative;
+    position: absolute;
+    top: 64px;
+    left: 0;
+
+    transition: $transition ease;
 
     .icon {
       position: absolute;
@@ -54,8 +78,6 @@
   }
 
   &__burger {
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: auto;
   }
 }
