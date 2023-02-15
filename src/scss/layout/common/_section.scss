@@ -3,11 +3,19 @@
     margin-bottom: 140px;
   }
 
+  @include breakpoint($breakpoint-mobile--large) {
+    margin-bottom: 100px;
+  }
+
   margin-bottom: 200px;
 
   &__header {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 64px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-bottom: 30px;
     }
 
     margin-bottom: 72px;
@@ -24,6 +32,10 @@
   &__title {
     @include breakpoint($breakpoint-laptop--medium) {
       font-size: $font-size__title--medium - 8px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large + 4px;
     }
 
     margin-bottom: 32px;

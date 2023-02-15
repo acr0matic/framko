@@ -12,6 +12,10 @@
       width: 100px;
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      content: none;
+    }
+
     content: "";
     position: absolute;
     z-index: 2;

@@ -1,4 +1,16 @@
 #slider-offer {
+  .swiper {
+    @include breakpoint($breakpoint-mobile--large) {
+      overflow: visible;
+    }
+  }
+
+  .swiper-control {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: none;
+    }
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     top: 32.5%;

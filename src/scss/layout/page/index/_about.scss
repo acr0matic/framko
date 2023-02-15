@@ -1,7 +1,14 @@
 #about {
+
 }
 
 .about {
+  &__picture {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 72px;
+    }
+  }
+
   &__content {
     position: relative;
     padding-top: 24px;
@@ -23,6 +30,11 @@
   }
 
   &__card {
+    @include breakpoint($breakpoint-mobile--large) {
+      min-height: 120px;
+      padding: 14px;
+    }
+
     min-height: 200px;
     padding: 18px 22px;
     border-radius: 8px;
@@ -31,6 +43,10 @@
   }
 
   &__text {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--small;
+    }
+
     font-size: $font-size__text--regular;
     line-height: 1.4;
   }

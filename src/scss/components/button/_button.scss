@@ -1,4 +1,8 @@
 .button {
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 16px 20px;
+  }
+
   padding: 18px 32px;
 
   border: none;

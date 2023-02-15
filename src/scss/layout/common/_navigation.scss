@@ -7,8 +7,30 @@
   }
 
   &__item {
+    text-align: right;
+
+    &:not(:last-child) {
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-bottom: 16px;
+      }
+
+      margin-bottom: 24px;
+    }
   }
 
   &__link {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--regular;
+    }
+
+    padding: 5px 0;
+    font-size: $font-size__text--big;
+    transition: $transition ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-text__blue;
+      }
+    }
   }
 }

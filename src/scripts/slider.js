@@ -1,7 +1,6 @@
 const sliderOffer = new Swiper('#slider-offer .swiper', {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 64,
+  slidesPerView: 1.25,
+  spaceBetween: 32,
 
   navigation: {
     prevEl: '#slider-offer .swiper-button-prev',
@@ -15,6 +14,12 @@ const sliderOffer = new Swiper('#slider-offer .swiper', {
 
 
   breakpoints: {
+    910: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 64,
+    },
+
     1300: {
       spaceBetween: 144
     },
@@ -33,10 +38,11 @@ const sliderOffer = new Swiper('#slider-offer .swiper', {
 });
 
 const sliderPrice = new Swiper('#slider-price .swiper', {
-  slidesPerView: 2.75,
+  slidesPerView: 1,
   spaceBetween: 24,
+
   grabCursor: true,
-  centeredSlides: true,
+  autoHeight: true,
 
   scrollbar: {
     el: '#slider-price .swiper-scrollbar',
@@ -51,6 +57,11 @@ const sliderPrice = new Swiper('#slider-price .swiper', {
   },
 
   breakpoints: {
+    910: {
+      slidesPerView: 2.75,
+      centeredSlides: true,
+    },
+
     1300: {
       slidesPerView: 3
     },

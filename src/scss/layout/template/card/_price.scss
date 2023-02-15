@@ -1,13 +1,25 @@
 .card-price {
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 18px 24px;
+  }
+
   display: flex;
   flex-grow: 1;
   flex-direction: column;
 
   padding: 24px 30px;
-  border: 1px solid $palette-black;
+  border: 2px solid $palette-black;
   border-radius: 24px;
 
+  &--fav {
+    border-color: $palette-blue;
+  }
+
   &__header {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding-bottom: 8px;
+    }
+
     margin-bottom: 40px;
     padding-bottom: 12px;
     border-bottom: 2px solid $palette-black;
@@ -22,6 +34,10 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large;
+    }
+
     margin-bottom: 4px;
     font-size: $font-size__title--small;
     text-align: center;
@@ -35,10 +51,19 @@
     &--new {
       .card-price__cost {
         &:nth-child(1) {
+          @include breakpoint($breakpoint-mobile--large) {
+            font-size: $font-size__text--big - 2px;
+          }
+
+          font-size: $font-size__text--large;
           text-decoration: line-through;
         }
 
         &:nth-child(2) {
+          @include breakpoint($breakpoint-mobile--large) {
+            font-size: $font-size__text--large;
+          }
+
           margin-left: 32px;
 
           color: $palette-blue;
@@ -49,8 +74,6 @@
   }
 
   &__cost {
-    font-size: $font-size__text--large;
-
     &::after {
       content: " ₽";
     }
@@ -62,6 +85,10 @@
 
     & > li {
       &:not(:last-child) {
+        @include breakpoint($breakpoint-mobile--large) {
+          margin-bottom: 20px;
+        }
+
         margin-bottom: 24px;
       }
 
@@ -76,6 +103,13 @@
         align-items: flex-start;
 
         &::before {
+          @include breakpoint($breakpoint-mobile--large) {
+            width: 33px;
+            height: 25px;
+
+            margin-right: 12px;
+          }
+
           content: "";
           display: block;
 
@@ -109,6 +143,10 @@
   }
 
   &__action {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 0;
+    }
+
     margin-top: auto;
     padding: 0 55px;
 

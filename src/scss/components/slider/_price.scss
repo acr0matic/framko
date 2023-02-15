@@ -4,6 +4,11 @@
   }
 
   .swiper-slide {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: block;
+      height: auto;
+    }
+
     display: flex;
     height: initial;
   }

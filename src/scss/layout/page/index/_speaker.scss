@@ -9,11 +9,26 @@
   }
 
   &__content {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding-top: 8px;
+    }
+
     padding-top: 54px;
   }
 
+  &__picture {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 50px;
+    }
+  }
+
   &__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-bottom: 16px;
+    }
+
     margin-bottom: 40px;
+    font-family: "Times New Roman", Times, serif;
   }
 
   &__text {

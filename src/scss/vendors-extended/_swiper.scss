@@ -6,6 +6,11 @@
   &-button {
     &-prev,
     &-next {
+      @include breakpoint($breakpoint-laptop--medium) {
+        width: 42px;
+        height: 42px;
+      }
+
       width: 54px;
       height: 54px;
 
@@ -54,6 +59,11 @@
     margin-top: 72px;
 
     &-bullet {
+      @include breakpoint($breakpoint-laptop--medium) {
+        width: 16px;
+        height: 16px;
+      }
+
       width: 20px;
       height: 20px;
 

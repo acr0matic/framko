@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 
 #hero {
+  @include breakpoint($breakpoint-mobile--large) {
+    margin-top: 120px;
+  }
+
   margin-top: 240px;
 }
 
@@ -10,6 +14,10 @@
   &__content {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 54px;
+    }
+
+    @include breakpoint(max-width 400px) {
+      margin-bottom: 108px;
     }
 
     margin-bottom: 84px;
@@ -20,6 +28,11 @@
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 36px;
       font-size: $font-size__title--medium;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__title--small;
+      line-height: 1.25;
     }
 
     margin-bottom: 50px;
@@ -36,10 +49,31 @@
       font-size: $font-size__text--regular + 2px;
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--regular;
+    }
+
     margin-bottom: 54px;
   }
 
   &__info {
+    .hero__action {
+      margin-top: 54px;
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint($breakpoint-mobile--large) {
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px 14px;
+    }
+
+    @include breakpoint(max-width 400px) {
+      flex-direction: column;
+    }
+
     display: inline-flex;
     align-items: flex-start;
 
@@ -50,29 +84,72 @@
   }
 
   &__advantage {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--small;
+    }
+
+    @include breakpoint(max-width 400px) {
+      display: flex;
+      width: 100% !important;
+
+      br {
+        display: none;
+      }
+    }
+
     color: $color-text__black;
     font-weight: $weight-Medium;
     font-size: $font-size__text--regular;
 
     &:not(:last-child) {
+      @include breakpoint($breakpoint-laptop--medium) {
+        margin-right: 32px;
+      }
+
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-right: 16px;
+      }
+
+      @include breakpoint(max-width 400px) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+
       margin-right: 50px;
     }
 
     &:nth-child(1) {
+      @include breakpoint($breakpoint-mobile--large) {
+        width: 75px;
+      }
+
       width: 120px;
     }
 
     &:nth-child(2) {
+      @include breakpoint($breakpoint-mobile--large) {
+        width: 125px;
+      }
+
       width: 186px;
     }
 
     &:nth-child(3) {
+      @include breakpoint($breakpoint-mobile--large) {
+        width: 112px;
+      }
+
       width: 170px;
     }
 
     .icon {
+      @include breakpoint(max-width 400px) {
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+
       width: 20px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
   }
 

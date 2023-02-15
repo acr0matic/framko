@@ -1,4 +1,7 @@
 #offer {
+  @include breakpoint($breakpoint-mobile--large) {
+    overflow: hidden;
+  }
 }
 
 .offer {

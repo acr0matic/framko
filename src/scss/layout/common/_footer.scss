@@ -6,6 +6,10 @@
 }
 
 .footer {
+  @include breakpoint($breakpoint-mobile--large) {
+    padding-bottom: 32px;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +21,10 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--large + 4px;
+    }
+
     margin-bottom: 12px;
 
     font-weight: $weight-Bold;

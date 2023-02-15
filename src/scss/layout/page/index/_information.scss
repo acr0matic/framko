@@ -6,11 +6,23 @@
     line-height: 1.7;
   }
 
+  &__picture {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 64px;
+    }
+  }
+
   &__list {
     margin-bottom: 40px;
   }
 
   &__text {
+    @include breakpoint($breakpoint-mobile--large) {
+      br {
+        display: none;
+      }
+    }
+
     margin-bottom: 54px;
     font-weight: $weight-SemiBold;
   }

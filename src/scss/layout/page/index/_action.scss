@@ -1,0 +1,10 @@
+#action {
+}
+
+.action {
+  &__picture {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 50px;
+    }
+  }
+}

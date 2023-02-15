@@ -7,6 +7,10 @@ body {
     font-size: $font-size__text--big - 2px;
   }
 
+  @include breakpoint($breakpoint-mobile--large) {
+    font-size: $font-size__text--regular;
+  }
+
   color: $color-text__primary;
 
   font-size: $font-size__text--big;
