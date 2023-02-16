@@ -1,5 +1,4 @@
 #about {
-
 }
 
 .about {
@@ -18,11 +17,21 @@
       z-index: -1;
 
       &:nth-child(1) {
+        @include breakpoint($breakpoint-mobile--large) {
+          top: 0;
+          right: -25%;
+        }
+
         top: -100px;
         right: -50%;
       }
 
       &:nth-child(2) {
+        @include breakpoint($breakpoint-mobile--large) {
+          right: 20%;
+          bottom: 0;
+        }
+
         right: 0;
         bottom: 0;
       }

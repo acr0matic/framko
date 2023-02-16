@@ -3,7 +3,13 @@
 
 .speaker {
   .icon-blinking-stars {
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 12px;
+      margin-bottom: -12px;
+    }
+
     position: absolute;
+    z-index: 2;
     top: 70px;
     left: 30px;
   }

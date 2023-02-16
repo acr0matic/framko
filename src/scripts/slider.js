@@ -60,6 +60,7 @@ const sliderPrice = new Swiper('#slider-price .swiper', {
     910: {
       slidesPerView: 2.75,
       centeredSlides: true,
+      autoHeight: false,
     },
 
     1300: {

@@ -1,8 +1,18 @@
 #video {
+  @include breakpoint($breakpoint-mobile--large) {
+    padding-top: 50px;
+  }
+
+  overflow: visible;
 }
 
 .video {
   .icon-blinking-stars {
+    @include breakpoint($breakpoint-mobile--large) {
+      top: -110px;
+      right: -20px;
+    }
+
     position: absolute;
     top: 40px;
     right: 40px;
@@ -21,6 +31,11 @@
 
     .cross {
       &:nth-child(1) {
+        @include breakpoint($breakpoint-mobile--large) {
+          top: -40px;
+          left: 0;
+        }
+
         top: 60px;
         left: 100px;
 
@@ -28,6 +43,10 @@
       }
 
       &:nth-child(2) {
+        @include breakpoint($breakpoint-mobile--large) {
+          right: 0;
+        }
+
         right: 200px;
         bottom: -40px;
 
@@ -46,12 +65,23 @@
     }
 
     .wave {
+      @include breakpoint($breakpoint-mobile--large) {
+        top: 110%;
+        left: -10px;
+
+        transform: scale(0.7);
+      }
+
       top: 80%;
       left: 200px;
     }
   }
 
   &__preview {
+    @include breakpoint($breakpoint-mobile--large) {
+      width: 405px;
+    }
+
     margin: 0 auto;
     border-radius: 24px;
   }

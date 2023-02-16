@@ -22,7 +22,7 @@ if (header) {
   // -------------------------------------------------------------------------------------------
 
   const mobile = document.querySelector('.mobile-menu');
-  const mobileOverlay = document.querySelector('.mobile-menu__overlay');
+  const overlay = document.querySelector('.overlay');
 
   const mobileBurger = header.querySelector('.hamburger');
 
@@ -32,5 +32,6 @@ if (header) {
   function Menu() {
     mobile.classList.toggle(StyleСlass.mobile.open);
     mobileBurger.classList.toggle('is-active')
+    overlay.classList.toggle('overlay--visible')
   }
 }

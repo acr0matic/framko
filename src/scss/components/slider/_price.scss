@@ -3,6 +3,14 @@
     overflow: visible;
   }
 
+  .swiper-wrapper {
+    @include breakpoint($breakpoint-mobile--large) {
+      align-items: flex-start;
+    }
+
+    align-items: stretch;
+  }
+
   .swiper-slide {
     @include breakpoint($breakpoint-mobile--large) {
       display: block;
