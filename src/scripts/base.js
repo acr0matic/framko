@@ -6,7 +6,7 @@ const isTablet = window.matchMedia('(max-width: 991px)').matches;
 const scrollParams = {
   speed: 500,
   speedAsDuration: true,
-  offset: 0,
+  offset: -100,
   updateURL: false,
 }
 

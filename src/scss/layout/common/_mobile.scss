@@ -9,7 +9,7 @@
   visibility: hidden;
 
   &__container {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       right: 0;
       width: 100%;
 
@@ -36,7 +36,7 @@
     visibility: visible;
 
     .mobile-menu__container {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-tablet) {
         transform: translateY(0%);
       }
 

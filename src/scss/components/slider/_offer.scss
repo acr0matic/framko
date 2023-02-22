@@ -1,12 +1,16 @@
 #slider-offer {
   .swiper {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-laptop--large) {
+      width: 85%;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
       overflow: visible;
     }
   }
 
   .swiper-control {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet--large) {
       display: none;
     }
   }
@@ -14,5 +18,17 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: 32.5%;
+  }
+
+  .swiper-button-prev {
+    @include breakpoint($breakpoint-laptop--large) {
+      left: 10px;
+    }
+  }
+
+  .swiper-button-next {
+    @include breakpoint($breakpoint-laptop--large) {
+      right: 10px;
+    }
   }
 }

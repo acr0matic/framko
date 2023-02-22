@@ -23,15 +23,20 @@ if (header) {
 
   const mobile = document.querySelector('.mobile-menu');
   const overlay = document.querySelector('.overlay');
-
+  const mobileNav = mobile.querySelectorAll('.nav__link');
   const mobileBurger = header.querySelector('.hamburger');
 
   mobileBurger.addEventListener('click', () => Menu());
-  mobileOverlay.addEventListener('click', () => Menu());
+
+  overlay.addEventListener('click', () => Menu());
+
+  mobileNav.forEach(link => link.addEventListener('click', () => Menu()));
 
   function Menu() {
     mobile.classList.toggle(StyleСlass.mobile.open);
     mobileBurger.classList.toggle('is-active')
-    overlay.classList.toggle('overlay--visible')
+
+    if (isMobile) overlay.classList.toggle('overlay--visible')
+
   }
 }

@@ -7,8 +7,18 @@
   }
 
   &__picture {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-top: 64px;
+    }
+
+    &.decoration-rect::after {
+      top: 50%;
+      left: 55%;
+
+      width: 390px;
+      height: 450px;
+
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -17,7 +27,7 @@
   }
 
   &__text {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       br {
         display: none;
       }

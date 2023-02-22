@@ -1,5 +1,5 @@
 #offer {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     overflow: hidden;
   }
 }
@@ -20,6 +20,12 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--big - 2px;
+    }
+
+    font-weight: $weight-Regular;
+    font-size: $font-size__text--big;
     text-align: center;
   }
 }

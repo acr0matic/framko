@@ -6,7 +6,7 @@
 }
 
 .footer {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     padding-bottom: 32px;
   }
 
@@ -21,7 +21,7 @@
   }
 
   &__title {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--large + 4px;
     }
 

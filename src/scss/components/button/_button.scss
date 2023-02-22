@@ -1,5 +1,5 @@
 .button {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     padding: 16px 20px;
   }
 

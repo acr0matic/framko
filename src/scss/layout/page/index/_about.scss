@@ -3,7 +3,7 @@
 
 .about {
   &__picture {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-top: 72px;
     }
   }
@@ -17,7 +17,7 @@
       z-index: -1;
 
       &:nth-child(1) {
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-tablet) {
           top: 0;
           right: -25%;
         }
@@ -27,7 +27,7 @@
       }
 
       &:nth-child(2) {
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-tablet) {
           right: 20%;
           bottom: 0;
         }
@@ -39,7 +39,7 @@
   }
 
   &__card {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       min-height: 120px;
       padding: 14px;
     }
@@ -52,7 +52,7 @@
   }
 
   &__text {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--small;
     }
 

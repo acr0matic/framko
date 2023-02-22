@@ -21,7 +21,7 @@
     }
 
     .header__wrapper {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-tablet) {
         padding: 18px 0;
       }
 
@@ -30,7 +30,7 @@
   }
 
   &__wrapper {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       align-items: center;
       padding-top: 36px;
       padding-bottom: 36px;
@@ -85,7 +85,7 @@
   }
 
   &__logo {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       position: static;
       margin-top: 8px;
       transform: none;
@@ -97,7 +97,7 @@
   }
 
   &__burger {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       transform: scale(0.8);
     }
 

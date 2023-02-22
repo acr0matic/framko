@@ -30,7 +30,23 @@
 }
 
 .container {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     padding: 0 24px !important;
+  }
+}
+
+.decoration-rect {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    display: block;
+    border: 1px solid $palette-black;
+    border-radius: 48px;
+    background-color: transparent;
   }
 }

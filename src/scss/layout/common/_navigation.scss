@@ -10,7 +10,7 @@
     text-align: right;
 
     &:not(:last-child) {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-tablet) {
         margin-bottom: 16px;
       }
 
@@ -19,7 +19,7 @@
   }
 
   &__link {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--regular;
     }
 

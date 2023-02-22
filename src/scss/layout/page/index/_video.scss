@@ -1,5 +1,5 @@
 #video {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     padding-top: 50px;
   }
 
@@ -8,7 +8,11 @@
 
 .video {
   .icon-blinking-stars {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-laptop) {
+      right: 0;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
       top: -110px;
       right: -20px;
     }
@@ -31,7 +35,11 @@
 
     .cross {
       &:nth-child(1) {
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-laptop) {
+          left: 50px;
+        }
+
+        @include breakpoint($breakpoint-tablet) {
           top: -40px;
           left: 0;
         }
@@ -43,7 +51,7 @@
       }
 
       &:nth-child(2) {
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-tablet) {
           right: 0;
         }
 
@@ -65,7 +73,11 @@
     }
 
     .wave {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-laptop) {
+        left: 0;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
         top: 110%;
         left: -10px;
 
@@ -78,7 +90,7 @@
   }
 
   &__preview {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       width: 405px;
     }
 

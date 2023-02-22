@@ -3,8 +3,15 @@
 
 .action {
   &__picture {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-top: 50px;
+    }
+
+    &.decoration-rect::after {
+      top: 56px;
+      left: -75px;
+      width: 380px;
+      height: 450px;
     }
   }
 }

@@ -8,7 +8,7 @@
   }
 
   &--header {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       width: 140px;
     }
   }

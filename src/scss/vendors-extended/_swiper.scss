@@ -53,6 +53,10 @@
   }
 
   &-pagination {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-top: 48px;
+    }
+
     position: static;
     display: block;
 

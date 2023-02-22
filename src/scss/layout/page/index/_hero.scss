@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 #hero {
-  @include breakpoint($breakpoint-mobile--large) {
+  @include breakpoint($breakpoint-tablet) {
     margin-top: 120px;
   }
 
@@ -11,6 +11,12 @@
 }
 
 .hero {
+  .button {
+    @include breakpoint($breakpoint-mobile--medium) {
+      width: 100%;
+    }
+  }
+
   &__content {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 54px;
@@ -30,7 +36,7 @@
       font-size: $font-size__title--medium;
     }
 
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__title--small;
       line-height: 1.25;
     }
@@ -49,7 +55,7 @@
       font-size: $font-size__text--regular + 2px;
     }
 
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--regular;
     }
 
@@ -58,13 +64,20 @@
 
   &__info {
     .hero__action {
-      margin-top: 54px;
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-top: 54px;
+      }
+
+      @include breakpoint($breakpoint-mobile--medium) {
+        margin-top: 36px;
+      }
+
       text-align: center;
     }
   }
 
   &__wrapper {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       justify-content: space-between;
       width: 100%;
       padding: 20px 14px;
@@ -84,7 +97,7 @@
   }
 
   &__advantage {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--small;
     }
 
@@ -106,7 +119,11 @@
         margin-right: 32px;
       }
 
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-laptop) {
+        margin-right: 16px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
         margin-right: 16px;
       }
 
@@ -119,7 +136,11 @@
     }
 
     &:nth-child(1) {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-laptop) {
+        width: 96px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
         width: 75px;
       }
 
@@ -127,7 +148,11 @@
     }
 
     &:nth-child(2) {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-laptop) {
+        width: 160px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
         width: 125px;
       }
 
@@ -135,7 +160,11 @@
     }
 
     &:nth-child(3) {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-laptop) {
+        width: 140px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
         width: 112px;
       }
 
@@ -156,5 +185,12 @@
   &__picture {
     left: -15px;
     width: 110%;
+
+    &.decoration-rect::after {
+      right: -15px;
+      bottom: 0;
+      width: 430px;
+      height: 450px;
+    }
   }
 }

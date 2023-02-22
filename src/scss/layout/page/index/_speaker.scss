@@ -3,7 +3,7 @@
 
 .speaker {
   .icon-blinking-stars {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-top: 12px;
       margin-bottom: -12px;
     }
@@ -15,7 +15,7 @@
   }
 
   &__content {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       padding-top: 8px;
     }
 
@@ -23,13 +23,23 @@
   }
 
   &__picture {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-top: 50px;
+    }
+
+    padding-bottom: 30px;
+
+    &.decoration-rect::after {
+      right: -30px;
+      bottom: 0;
+
+      width: 375px;
+      height: 450px;
     }
   }
 
   &__title {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       margin-bottom: 16px;
     }
 

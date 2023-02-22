@@ -9,12 +9,29 @@
   .section__header {
     position: relative;
   }
+
+  .section__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+
+      width: 120%;
+      height: 2px;
+
+      background-color: $palette-black;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .feedback {
   &__grid {
     &--main {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-tablet) {
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 12px;
@@ -28,7 +45,7 @@
 
       & > * {
         &:nth-child(1) {
-          @include breakpoint($breakpoint-mobile--large) {
+          @include breakpoint($breakpoint-tablet) {
             grid-area: 1 / 1 / 2 / 3;
           }
 
@@ -39,7 +56,7 @@
         }
 
         &:nth-child(2) {
-          @include breakpoint($breakpoint-mobile--large) {
+          @include breakpoint($breakpoint-tablet) {
             grid-area: 2 / 1 / 4 / 2;
           }
 
@@ -47,7 +64,7 @@
         }
 
         &:nth-child(3) {
-          @include breakpoint($breakpoint-mobile--large) {
+          @include breakpoint($breakpoint-tablet) {
             grid-area: 2 / 2 / 3 / 3;
           }
 
@@ -55,7 +72,7 @@
         }
 
         &:nth-child(4) {
-          @include breakpoint($breakpoint-mobile--large) {
+          @include breakpoint($breakpoint-tablet) {
             grid-area: 3 / 2 / 4 / 3;
           }
 
@@ -65,7 +82,7 @@
     }
 
     &--advanced {
-      @include breakpoint($breakpoint-mobile--large) {
+      @include breakpoint($breakpoint-tablet) {
         margin-top: 12px;
         margin-bottom: -12px;
       }
@@ -78,7 +95,7 @@
       margin-bottom: -36px;
 
       & > * {
-        @include breakpoint($breakpoint-mobile--large) {
+        @include breakpoint($breakpoint-tablet) {
           width: calc(50% - 6px) !important;
           margin-bottom: 12px;
         }
@@ -102,15 +119,15 @@
       left: -145px;
     }
 
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       display: none;
     }
 
     position: absolute;
     z-index: -1;
 
-    top: -70px;
-    left: -95px;
+    top: -100px;
+    left: -75px;
 
     width: 650px;
 
@@ -124,7 +141,7 @@
       left: 10px;
     }
 
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       display: none;
     }
 
