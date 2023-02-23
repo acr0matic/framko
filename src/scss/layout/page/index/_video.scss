@@ -68,13 +68,17 @@
     }
 
     .circle {
+      @include breakpoint($breakpoint-tablet) {
+        top: 0;
+      }
+
       top: 40%;
       left: 0;
     }
 
     .wave {
       @include breakpoint($breakpoint-laptop) {
-        left: 0;
+        left: 100px;
       }
 
       @include breakpoint($breakpoint-tablet) {

@@ -119,6 +119,11 @@
       left: -145px;
     }
 
+    @include breakpoint($breakpoint-laptop) {
+      top: -130px;
+      left: -125px;
+    }
+
     @include breakpoint($breakpoint-tablet) {
       display: none;
     }

@@ -62,6 +62,7 @@ const paths = {
     src: [
       './src/**/*.*',
       '!./src/css/**/*.*',
+      '!./src/layout/**/*.*',
       '!./src/img/**/*.!(webp)',
       '!./src/scripts/**/*.*',
       '!./src/scss/**/*.*',

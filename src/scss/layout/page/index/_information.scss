@@ -12,6 +12,11 @@
     }
 
     &.decoration-rect::after {
+      @include breakpoint($breakpoint-tablet) {
+        width: 68.2vw;
+        height: 72vw;
+      }
+
       top: 50%;
       left: 55%;
 

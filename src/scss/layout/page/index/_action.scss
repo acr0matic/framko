@@ -7,7 +7,19 @@
       margin-top: 50px;
     }
 
+    @include breakpoint($breakpoint-mobile--large) {
+      width: 90%;
+      margin-left: auto;
+    }
+
     &.decoration-rect::after {
+      @include breakpoint($breakpoint-tablet) {
+        top: 36px;
+        left: -35px;
+        width: 68.2vw;
+        height: 70vw;
+      }
+
       top: 56px;
       left: -75px;
       width: 380px;

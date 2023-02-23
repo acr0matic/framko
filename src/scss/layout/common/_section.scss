@@ -3,11 +3,11 @@
     margin-bottom: 140px;
   }
 
-  @include breakpoint($breakpoint-tablet) {
+  @include breakpoint($breakpoint-laptop) {
     margin-bottom: 100px;
   }
 
-  overflow: hidden;
+  overflow-x: clip;
   margin-bottom: 200px;
 
   &__header {
@@ -37,6 +37,10 @@
 
     @include breakpoint($breakpoint-tablet) {
       font-size: $font-size__text--large + 4px;
+    }
+
+    @include breakpoint($breakpoint-mobile--medium) {
+      font-size: $font-size__text--large;
     }
 
     margin-bottom: 32px;

@@ -34,7 +34,7 @@
   }
 
   &__title {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-laptop) {
       font-size: $font-size__text--large;
     }
 
@@ -51,6 +51,10 @@
     &--new {
       .card-price__cost {
         &:nth-child(1) {
+          @include breakpoint($breakpoint-laptop) {
+            font-size: $font-size__text--big;
+          }
+
           @include breakpoint($breakpoint-tablet) {
             font-size: $font-size__text--big - 2px;
           }
@@ -60,6 +64,10 @@
         }
 
         &:nth-child(2) {
+          @include breakpoint($breakpoint-laptop) {
+            font-size: $font-size__text--large;
+          }
+
           @include breakpoint($breakpoint-tablet) {
             font-size: $font-size__text--large;
           }
@@ -103,10 +111,12 @@
         align-items: flex-start;
 
         &::before {
-          @include breakpoint($breakpoint-tablet) {
+          @include breakpoint($breakpoint-laptop) {
             width: 33px;
             height: 25px;
+          }
 
+          @include breakpoint($breakpoint-tablet) {
             margin-right: 12px;
           }
 

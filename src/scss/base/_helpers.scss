@@ -39,6 +39,10 @@
   position: relative;
 
   &::after {
+    @include breakpoint($breakpoint-tablet) {
+      border-radius: 38px;
+    }
+
     content: "";
 
     position: absolute;

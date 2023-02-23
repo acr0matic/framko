@@ -16,7 +16,7 @@ if (header) {
   SetHeight(header);
   Background();
 
-  window.addEventListener('resize', () => SetHeight(content));
+  window.addEventListener('resize', () => SetHeight(header));
   window.addEventListener('scroll', () => Background());
 
   // -------------------------------------------------------------------------------------------

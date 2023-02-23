@@ -30,6 +30,11 @@
     padding-bottom: 30px;
 
     &.decoration-rect::after {
+      @include breakpoint($breakpoint-tablet) {
+        width: 68.2vw;
+        height: 250px;
+      }
+
       right: -30px;
       bottom: 0;
 

@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding-bottom: 100px;
+  padding-bottom: 48px;
 
   &__content {
     text-align: center;
@@ -37,5 +37,19 @@
 
   &__contact {
     margin-top: 64px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 48px;
+    text-align: center;
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
   }
 }

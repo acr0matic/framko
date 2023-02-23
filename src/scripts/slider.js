@@ -13,12 +13,12 @@ const sliderOffer = new Swiper('#slider-offer .swiper', {
   },
 
   breakpoints: {
-    460: {
+    540: {
       slidesPerView: 1.75,
     },
 
     768: {
-      slidesPerView: 2.5,
+      slidesPerView: 2,
       spaceBetween: 32,
     },
 
@@ -27,7 +27,7 @@ const sliderOffer = new Swiper('#slider-offer .swiper', {
       slidesPerGroup: 3,
     },
 
-    1200: {
+    1120: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 96,
@@ -68,16 +68,16 @@ const sliderPrice = new Swiper('#slider-price .swiper', {
     768: {
       slidesPerView: 1.75,
       centeredSlides: true,
-
     },
 
     991: {
-      slidesPerView: 2.15,
+      slidesPerView: 2.5,
+      centeredSlides: true,
 
       autoHeight: false,
     },
 
-    1300: {
+    1120: {
       slidesPerView: 3
     },
   }
