@@ -23,3 +23,10 @@ const StyleСlass = {
     'active': 'swiper-button--active',
   },
 }
+
+const modalParams = {
+  awaitCloseAnimation: true,
+  disableFocus: true,
+}
+
+let currentModal = '';

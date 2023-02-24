@@ -14,23 +14,53 @@ $transition-time: 0.2s;
     justify-content: center;
 
     background: rgba(#000000, 0.7);
+    backdrop-filter: blur(2px);
   }
 
   &__container {
+    @include breakpoint($breakpoint-tablet) {
+      width: 95%;
+      padding: 24px;
+      border-radius: 16px;
+    }
+
     position: relative;
+
+    width: 100%;
+    max-width: 720px;
+    padding: 48px;
+    border-radius: 24px;
+
+    background-color: $palette-white;
   }
 
   &__header {
+    @include breakpoint($breakpoint-tablet) {
+      text-align: left;
+    }
+
+    margin-bottom: 48px;
+    text-align: center;
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--large;
+    }
+
+    font-size: $font-size__title--small;
+    font-family: "Times New Roman", Times, serif;
   }
 
   &__close {
+    @include breakpoint($breakpoint-tablet) {
+      transform: scale(0.8);
+    }
+
     position: absolute;
     z-index: 3;
-    top: 10px;
-    right: 5px;
+    top: 25px;
+    right: 25px;
 
     border: none;
     outline: none;

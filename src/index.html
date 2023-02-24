@@ -545,9 +545,9 @@
           <div class="price__description">
             <img class="me-3" src="img/icons/misc/gift.svg" alt="">
             <p>
-              Чек-лист по подготовке
+              Книга по медицинскому
               <br>
-              к переезду в подарок!
+              немецкому в подарок
             </p>
           </div>
           <!-- /.price__description -->
@@ -561,7 +561,7 @@
                       <h3 class="card-price__title">Cтандарт</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost">9 900</span>
+                        <span class="card-price__cost cost-primary">9 900</span>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -615,7 +615,7 @@
                       </ul>
 
                       <div class="card-price__action">
-                        <button class="button button--block button-primary">Выбрать тариф</button>
+                        <button data-micromodal-trigger="modal-pay" class="button button--block button-primary">Выбрать тариф</button>
                       </div>
                       <!-- /.card-price__action -->
                     </div>
@@ -631,7 +631,7 @@
                       <h3 class="card-price__title">Комфорт</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost">13 900</span>
+                        <span class="card-price__cost cost-primary">13 900</span>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -729,7 +729,7 @@
                       </ul>
 
                       <div class="card-price__action">
-                        <button class="button button--block button-primary">Выбрать тариф</button>
+                        <button data-micromodal-trigger="modal-pay" class="button button--block button-primary">Выбрать тариф</button>
                       </div>
                       <!-- /.card-price__action -->
                     </div>
@@ -746,7 +746,7 @@
 
                       <div class="card-price__price card-price__price--new">
                         <span class="card-price__cost">24 990</span>
-                        <span class="card-price__cost">24 900</span>
+                        <span class="card-price__cost cost-primary">24 900</span>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -862,7 +862,7 @@
                       </ul>
 
                       <div class="card-price__action">
-                        <button class="button button--block button-primary">Выбрать тариф</button>
+                        <button data-micromodal-trigger="modal-pay" class="button button--block button-primary">Выбрать тариф</button>
                       </div>
                       <!-- /.card-price__action -->
                     </div>
@@ -878,7 +878,7 @@
                       <h3 class="card-price__title">VIP</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost">39 900</span>
+                        <span class="card-price__cost cost-primary">39 900</span>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -1009,7 +1009,7 @@
                       </ul>
 
                       <div class="card-price__action">
-                        <button class="button button--block button-primary">Выбрать тариф</button>
+                        <button data-micromodal-trigger="modal-pay" class="button button--block button-primary">Выбрать тариф</button>
                       </div>
                       <!-- /.card-price__action -->
                     </div>
@@ -1218,7 +1218,7 @@
         <div class="contact-list__item">
           <a target="_blank" href="https://www.instagram.com/framko_education/">
             <img src="img/icons/contact/instagram.svg" alt="">
-            <span>https://isntagram.com</span>
+            <span>@framko_education</span>
           </a>
         </div>
         <!-- /.contact-list__item -->
@@ -1226,19 +1226,10 @@
       <!-- /.footer__contact contact-list -->
 
       <div class="footer__info">
-        <span>ИП Вино Франческа Карловна</span>
+          <span>ИП Вино Франческа Карловна</span>
+          <span class="ms-sm-3">ИНН 343532457171</span>
 
-        <span>
-          ОГРНИП
-          <br>
-          322344300033807
-        </span>
-
-        <span>
-          ИНН
-          <br>
-          343532457171
-        </span>
+          <span class="ms-sm-auto">ОГРНИП 322344300033807</span>
       </div>
       <!-- /.footer__info -->
     </div>
@@ -1247,18 +1238,91 @@
   <!-- /.container -->
 </footer>
 
+<div class="modal modal-pay micromodal-slide" id="modal-pay" aria-hidden="true">
+  <div class="modal__overlay" data-micromodal-close>
+    <div class="modal__container" role="dialog">
+      <div class="modal__header">
+        <h3 class="modal__title">Тариф <span>Комфорт +</span></h3>
+
+        <svg class="modal__close" data-micromodal-close width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path data-micromodal-close d="M2 2L24 24M24 2L2 24" stroke="#424242" stroke-width="3" />
+        </svg>
+      </div>
+
+      <div class="modal__content">
+        <form action="" data-target="pay" data-subject="Тариф" data-price="" class="modal__form form">
+          <div class="row">
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="input">
+                <input placeholder="Иван" autocomplete="off" type="text" name="user_fn" class="input__field">
+                <span class="input__label">Ваше имя</span>
+              </div>
+              <!-- /.input -->
+            </div>
+            <!-- /.col-6 -->
+
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="input">
+                <input placeholder="Иванов" autocomplete="off" type="text" name="user_ln" class="input__field">
+                <span class="input__label">Ваша Фамилия</span>
+              </div>
+              <!-- /.input -->
+            </div>
+            <!-- /.col-6 -->
+
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="input">
+                <input placeholder="I.I.Ivanov@gmail.com" autocomplete="off" type="email" name="user_email" class="input__field input__field--block">
+                <span class="input__label">E-mail</span>
+              </div>
+              <!-- /.input -->
+            </div>
+            <!-- /.col-6 -->
+
+            <div class="col-12 col-sm-6">
+              <div class="input">
+                <input placeholder="+7 (777 ) 777 77 77" autocomplete="off" type="tel" name="user_phone" class="input__field input__field--block">
+                <span class="input__label">Ваш телефон</span>
+              </div>
+              <!-- /.input -->
+            </div>
+            <!-- /.col-6 -->
+          </div>
+          <!-- /.row -->
+
+          <div class="form__action">
+            <button class="button button-secondary" type="submit" data-sending="Отправка...">Оформить*</button>
+          </div>
+          <!-- /.form__action -->
+
+          <div class="form__privacy">
+            *Нажимая на кнопку Вы соглашаетесь с обработкой данных и главными
+            <br>
+            правилами компании
+          </div>
+          <!-- /.form__privacy -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal -->
+
 <!-- Скрипты -->
 <!-- build:js js/script.min.js -->
 <script src="scripts/libraries/lazyload.js"></script>
+<script src="scripts/libraries/imask.js"></script>
 <script src="scripts/libraries/forms.js"></script>
 <script src="scripts/libraries/swiper.min.js"></script>
 <script src="scripts/libraries/smoothScroll.js"></script>
 <script src="scripts/libraries/fslightbox.js"></script>
+<script src="scripts/libraries/micromodal.min.js"></script>
 
 <script src="scripts/base.js"></script>
 <script src="scripts/init.js"></script>
 <script src="scripts/slider.js"></script>
 <script src="scripts/header.js"></script>
+<script src="scripts/modal.js"></script>
 <!-- endbuild -->
 </body>
 

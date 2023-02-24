@@ -22,36 +22,59 @@
   }
 
   &__field {
-    width: 100%;
-    padding: 20px 25px;
+    @include breakpoint($breakpoint-tablet) {
+      padding: 16px 26px;
+      border-radius: 8px;
+    }
 
-    border: 1px solid $palette-black;
+    width: 100%;
+    padding: 20px 32px;
+
+    border: 1px solid #8e8e8e;
+    border-radius: 12px;
     outline: none;
 
     background-color: transparent;
     color: $color-text__primary;
 
     font-size: $font-size__text--regular;
+    transition: $transition ease;
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: #000000;
+      }
+    }
 
     &::placeholder {
-      color: #353535;
+      color: #8e8e8e;
+    }
+
+    &:focus {
+      border-color: #000000;
+
+      & ~ .input__label {
+        color: $color-text__blue;
+      }
     }
   }
 
-  &__warning {
+  &__label {
+    @include breakpoint($breakpoint-tablet) {
+      left: 22px;
+    }
+
     position: absolute;
-    top: 50%;
-    right: 15px;
+    top: -8px;
+    left: 27px;
 
-    width: 24px;
-    height: 24px;
+    padding: 0 5px;
 
-    opacity: 0;
-    visibility: hidden;
+    background-color: $palette-white;
 
-    cursor: help;
-    transform: translateY(-50%);
+    color: #252525;
+    font-size: $font-size__text--small;
 
-    transition: 0.2s ease;
+    transition: $transition ease;
   }
 }

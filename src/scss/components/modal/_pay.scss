@@ -1,0 +1,15 @@
+.modal-pay {
+  .modal__title span {
+    color: $color-text__blue;
+  }
+
+  .form__action {
+    margin-top: 36px;
+    text-align: center;
+
+    .button {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+}
