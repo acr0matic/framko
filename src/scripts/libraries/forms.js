@@ -155,11 +155,11 @@ class Form {
     const data = new FormData(this.form);
 
     const target = this.form.getAttribute('data-target');
-    const additional = this.form.getAttribute('data-additional');
     const subject = this.form.getAttribute('data-subject');
+    const price = this.form.getAttribute('data-price');
 
     data.append('target', target);
-    if (additional) data.append('additional', additional);
+    if (price) data.append('price', price);
     if (subject) data.append('subject', subject);
 
     // for (var pair of data.entries()) {
@@ -175,12 +175,12 @@ class Form {
       if (response.ok) {
         if (this.redirect) window.location.href = this.redirect;
 
-        MicroModal.close('modal-callback', modalParams);
-        MicroModal.show('modal-success', modalParams);
+        MicroModal.close('modal-pay', modalParams);
+        // MicroModal.show('modal-success', modalParams);
 
-        setTimeout(() => {
-          MicroModal.close('modal-success', modalParams);
-        }, 3000);
+        // setTimeout(() => {
+        //   MicroModal.close('modal-success', modalParams);
+        // }, 3000);
       }
 
       let result = await response.json();
@@ -190,7 +190,7 @@ class Form {
     }
 
     // Логируем ошибку, если возникла
-    catch (error) {
+    catch (e) {
       console.error('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
     }
 
