@@ -6,6 +6,7 @@ if (modalPrice) {
   cards.forEach(card => {
     const title = card.querySelector('.card-price__title').textContent;
     const price = card.querySelector('.cost-primary').textContent;
+    const discount = card.querySelector('.cost-discount').textContent;
 
     const button = card.querySelector('.button[data-micromodal-trigger]')
 
@@ -13,6 +14,7 @@ if (modalPrice) {
       modalPrice.querySelector('.modal__title span').innerHTML = title;
       modalPrice.querySelector('form').dataset.subject = `Тариф ${title}`;
       modalPrice.querySelector('form').dataset.price = price.replace(' ', '');
+      modalPrice.querySelector('form').dataset.discount = discount.replace(' ', '');
     });
   });
 }

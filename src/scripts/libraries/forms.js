@@ -157,10 +157,12 @@ class Form {
     const target = this.form.getAttribute('data-target');
     const subject = this.form.getAttribute('data-subject');
     const price = this.form.getAttribute('data-price');
+    const discount = this.form.getAttribute('data-discount');
 
     data.append('target', target);
     if (price) data.append('price', price);
     if (subject) data.append('subject', subject);
+    if (discount) data.append('discount', discount);
 
     // for (var pair of data.entries()) {
     //   console.log(pair[0]+ ', ' + pair[1]);
@@ -176,17 +178,12 @@ class Form {
         if (this.redirect) window.location.href = this.redirect;
 
         MicroModal.close('modal-pay', modalParams);
-        // MicroModal.show('modal-success', modalParams);
-
-        // setTimeout(() => {
-        //   MicroModal.close('modal-success', modalParams);
-        // }, 3000);
       }
 
       let result = await response.json();
-      console.log(result);
-
       this.Clear();
+
+      window.location.href = result;
     }
 
     // Логируем ошибку, если возникла
