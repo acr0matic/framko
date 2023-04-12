@@ -561,7 +561,10 @@
                       <h3 class="card-price__title">Cтандарт</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost cost-primary">9 900</span>
+                        <div>
+                          <span class="card-price__cost cost-primary">5 500</span>
+                          <span class="card-price__cost">140</span>
+                        </div>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -631,7 +634,10 @@
                       <h3 class="card-price__title">Комфорт</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost cost-primary">13 900</span>
+                        <div>
+                          <span class="card-price__cost cost-primary">12 500</span>
+                          <span class="card-price__cost">140</span>
+                        </div>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -745,8 +751,15 @@
                       <h3 class="card-price__title">Комфорт +</h3>
 
                       <div class="card-price__price card-price__price--new">
-                        <span class="card-price__cost">24 990</span>
-                        <span class="card-price__cost cost-primary">24 900</span>
+                        <div>
+                          <span class="card-price__cost cost-primary">24 500</span>
+                          <span class="card-price__cost">140</span>
+                        </div>
+
+                        <div>
+                          <span class="card-price__cost cost-discount">21 900</span>
+                          <span class="card-price__cost">130</span>
+                        </div>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -878,7 +891,10 @@
                       <h3 class="card-price__title">VIP</h3>
 
                       <div class="card-price__price">
-                        <span class="card-price__cost cost-primary">39 900</span>
+                        <div>
+                          <span class="card-price__cost cost-primary">39 500</span>
+                          <span class="card-price__cost">140</span>
+                        </div>
                       </div>
                       <!-- /.card-price__price -->
                     </div>
@@ -1250,11 +1266,11 @@
       </div>
 
       <div class="modal__content">
-        <form action="php/pay.php" data-target="pay" data-subject="Тариф" data-price="" class="modal__form form">
+        <form action="" data-target="pay" data-subject="Тариф" data-price="" class="modal__form form">
           <div class="row">
             <div class="col-12 col-sm-6 mb-4">
               <div class="input">
-                <input data-required placeholder="Иван" autocomplete="off" type="text" name="user_fn" class="input__field">
+                <input placeholder="Иван" autocomplete="off" type="text" name="user_fn" class="input__field">
                 <span class="input__label">Ваше имя</span>
               </div>
               <!-- /.input -->
@@ -1263,7 +1279,7 @@
 
             <div class="col-12 col-sm-6 mb-4">
               <div class="input">
-                <input data-required placeholder="Иванов" autocomplete="off" type="text" name="user_ln" class="input__field">
+                <input placeholder="Иванов" autocomplete="off" type="text" name="user_ln" class="input__field">
                 <span class="input__label">Ваша Фамилия</span>
               </div>
               <!-- /.input -->
@@ -1272,7 +1288,7 @@
 
             <div class="col-12 col-sm-6 mb-4">
               <div class="input">
-                <input data-required placeholder="I.I.Ivanov@gmail.com" autocomplete="off" type="email" name="user_email" class="input__field input__field--block">
+                <input placeholder="I.I.Ivanov@gmail.com" autocomplete="off" type="email" name="user_email" class="input__field input__field--block">
                 <span class="input__label">E-mail</span>
               </div>
               <!-- /.input -->
