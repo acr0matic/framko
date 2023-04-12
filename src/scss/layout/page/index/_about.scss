@@ -57,11 +57,19 @@
 
   &__text {
     @include breakpoint($breakpoint-tablet) {
-      font-size: $font-size__text--small;
+      font-size: $font-size__text--regular;
     }
 
-    font-size: $font-size__text--regular;
+    font-size: $font-size__text--big;
     line-height: 1.4;
+
+    strong {
+      @include breakpoint($breakpoint-tablet) {
+        font-weight: $weight-Bold;
+      }
+
+      font-weight: $weight-Regular;
+    }
   }
 
   &__info {

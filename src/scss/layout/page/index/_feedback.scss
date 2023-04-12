@@ -113,6 +113,11 @@
     }
   }
 
+  &__picture {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
   &__background {
     @include breakpoint($breakpoint-laptop--medium) {
       top: -120px;

@@ -45,34 +45,61 @@
 
   &__price {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    &--new {
+    div {
       .card-price__cost {
+        @include breakpoint($breakpoint-tablet) {
+          font-size: $font-size__text--big;
+        }
+
+        font-size: $font-size__text--large;
+
         &:nth-child(1) {
-          @include breakpoint($breakpoint-laptop) {
-            font-size: $font-size__text--big;
+          &::after {
+            content: " ₽";
           }
-
-          @include breakpoint($breakpoint-tablet) {
-            font-size: $font-size__text--big - 2px;
-          }
-
-          font-size: $font-size__text--large;
-          text-decoration: line-through;
         }
 
         &:nth-child(2) {
-          @include breakpoint($breakpoint-laptop) {
-            font-size: $font-size__text--large;
+          &::before {
+            content: "/ ";
           }
 
+          &::after {
+            content: " €";
+          }
+        }
+      }
+    }
+
+    &--new {
+      div:nth-child(1) {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+
+          display: block;
+          width: 100%;
+          height: 1px;
+
+          background-color: $color-text__black;
+
+          transform: translateY(-50%);
+        }
+      }
+
+      div:nth-child(2) {
+        .card-price__cost {
           @include breakpoint($breakpoint-tablet) {
-            font-size: $font-size__text--large;
+            font-size: $font-size__text--large + 3px;
           }
-
-          margin-left: 32px;
 
           color: $palette-blue;
           font-size: $font-size__title--small;
@@ -82,9 +109,6 @@
   }
 
   &__cost {
-    &::after {
-      content: " ₽";
-    }
   }
 
   &__list {
@@ -100,15 +124,15 @@
         margin-bottom: 24px;
       }
 
-      &:last-child {
-        & > *::before {
-          background-image: url("../img/icons/misc/check--purple.svg");
-        }
-      }
-
       & > span {
         display: flex;
         align-items: flex-start;
+
+        &.purple {
+          &::before {
+            background-image: url("../img/icons/misc/check--purple.svg");
+          }
+        }
 
         &::before {
           @include breakpoint($breakpoint-laptop) {
